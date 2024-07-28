@@ -1,6 +1,7 @@
 import Header from "./components/Header"
-import Guitar from "./components/Guitar"
+import GuitarC from "./components/Guitar"
 import {useCart} from "./hooks/useCart"
+import type { Guitar } from "./types"
 
 function App() {    
 
@@ -21,8 +22,8 @@ function App() {
                 <h2 className="text-center">Nuestra Colección</h2>
 
                 <div className="row mt-5">          
-                    {data.map((guitar) => (
-                        <Guitar
+                    {data.map((guitar : Guitar) => (
+                        <GuitarC
                             key={guitar.id} 
                             guitar={guitar}
                             addToCart={addToCart}
